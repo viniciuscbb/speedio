@@ -26,8 +26,7 @@ def unzip_file(file_name):
 def insert_data(file_name):
     print('Enviando dados para o MongoDB...')
     mongodb = MongoDB()
-    with open(f'./json/{file_name}.json', 'w') as outfile:
-        json.dump([], outfile)
+
     with open(f'./csv/{file_name}.csv', 'r') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=';')
         for row in csv_reader:
